@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090d">
+  <title>Para Gabito 🏁</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars"></div>
+
+  <main class="scene">
+    <section class="card" id="card">
+      <div class="badge">🏁 UNA SORPRESA PARA TI</div>
+      <h1>Feliz Día de los<br><span>Hot Wheels 🏎️</span></h1>
+      <p class="subtitle">Porque algunas personas merecen un regalo que llegue a toda velocidad.</p>
+
+      <button class="gift" id="openGift" aria-label="Abrir regalo">
+        <span class="gift-lid"></span>
+        <span class="gift-box">🎁</span>
+        <span class="gift-text">Toca para abrir este regalo</span>
+      </button>
+
+      <div class="names">
+        <div><small>DE</small><strong>Jazmin</strong></div>
+        <div class="heart">♥</div>
+        <div><small>PARA</small><strong>Gabito</strong></div>
+      </div>
+    </section>
+
+    <section class="reveal" id="reveal" aria-hidden="true">
+      <div class="speed-line line1"></div>
+      <div class="speed-line line2"></div>
+      <div class="speed-line line3"></div>
+
+      <div class="car-wrap" id="carWrap">
+        <div class="smoke smoke1"></div>
+        <div class="smoke smoke2"></div>
+        <div class="smoke smoke3"></div>
+
+        <!-- Deportivo inspirado en un Porsche 911; dibujo vectorial para que no necesite imágenes externas. -->
+        <svg class="car" viewBox="0 0 900 360" role="img" aria-label="Auto deportivo estilo Porsche">
+          <defs>
+            <linearGradient id="body" x1="0" x2="1">
+              <stop offset="0" stop-color="#b70820"/>
+              <stop offset=".45" stop-color="#f21f3f"/>
+              <stop offset="1" stop-color="#7d0617"/>
+            </linearGradient>
+            <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#aeeaff"/>
+              <stop offset=".45" stop-color="#193449"/>
+              <stop offset="1" stop-color="#06090e"/>
+            </linearGradient>
+            <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+
+          <ellipse cx="450" cy="306" rx="355" ry="30" fill="#000" opacity=".55"/>
+          <path d="M80 272 C100 235 153 220 216 216 C275 130 355 92 498 100 C576 103 629 132 677 190 C742 198 800 220 822 258 L820 282 L77 282 Z"
+                fill="url(#body)" stroke="#ff5269" stroke-width="4"/>
+          <path d="M245 213 C296 140 359 116 480 120 C548 122 594 145 632 192 L640 213 Z"
+                fill="url(#glass)" stroke="#ff8291" stroke-width="3"/>
+          <path d="M424 122 L421 213 M490 123 L515 213" stroke="#6b8799" stroke-width="4" opacity=".7"/>
+          <path d="M104 247 Q180 222 236 227" stroke="#ffb7c1" stroke-width="5" fill="none" opacity=".75"/>
+          <path d="M650 221 Q721 218 782 248" stroke="#ffb7c1" stroke-width="4" fill="none" opacity=".5"/>
+          <path d="M78 264 L168 263" stroke="#ff304e" stroke-width="15" stroke-linecap="round" filter="url(#glow)"/>
+          <path d="M740 255 L806 260" stroke="#ffe9bd" stroke-width="12" stroke-linecap="round" filter="url(#glow)"/>
+
+          <g>
+            <circle cx="235" cy="279" r="62" fill="#08090d" stroke="#30343d" stroke-width="10"/>
+            <circle cx="235" cy="279" r="36" fill="#171a20" stroke="#8b919c" stroke-width="5"/>
+            <circle cx="235" cy="279" r="12" fill="#d7dbe0"/>
+            <path d="M235 244v70M200 279h70M210 254l50 50M260 254l-50 50" stroke="#666c76" stroke-width="4"/>
+          </g>
+          <g>
+            <circle cx="674" cy="279" r="62" fill="#08090d" stroke="#30343d" stroke-width="10"/>
+            <circle cx="674" cy="279" r="36" fill="#171a20" stroke="#8b919c" stroke-width="5"/>
+            <circle cx="674" cy="279" r="12" fill="#d7dbe0"/>
+            <path d="M674 244v70M639 279h70M649 254l50 50M699 254l-50 50" stroke="#666c76" stroke-width="4"/>
+          </g>
+
+          <path d="M350 242 Q450 210 560 242" fill="none" stroke="#570512" stroke-width="7"/>
+          <text x="448" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="bold" fill="#fff" opacity=".9">SPORT</text>
+        </svg>
+      </div>
+
+      <div class="message">
+        <div class="tiny">🏁 MOTOR ENCENDIDO...</div>
+        <h2>Gabito, este es para ti ❤️</h2>
+        <p>
+          Que nunca te falten motivos para sonreír, sueños por cumplir
+          y aventuras que se sientan como ir a toda velocidad.
+          <br><br>
+          <b>Con cariño, Jazmin ✨</b>
+        </p>
+        <button class="again" id="again">↻ Volver a ver</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="confetti" id="confetti"></div>
+  <script src="script.js"></script>
+</body>
+</html>
